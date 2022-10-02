@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="blah2.css">
+<body style="background-color:rgb(247, 236, 216) ;">
+
+<h1 align="center" style=" position: sticky; top: 0; font-family:Arial, Helvetica, sans-serif; list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: rgb(83, 40, 31); color:aliceblue;">
+<ul>
+    <li class="homepage"><a href="#"><img src="logo.png" height="45" width="55"></a></li>
+    <li>Evaluation without Confrontation</li>
+</ul>
+</h1>
+
+<br>
+<br>
+<form style="margin-top: 5%; position: center; float: left;">
+    <input type="radio" id="class1" value="Class 1">
+    <label for="class1">Class 1</label>
+    <br>
+    <input type="radio" id="class2" value="Class 2">
+    <label for="class2">Class 2</label>
+    <br>
+    <input type="radio" id="class3" value="Class 3">
+    <label for="class3">Class 3</label>
+    <br>
+    <input type="radio" id="class4" value="Class 4">
+    <label for="class4">Class 4</label>
+    <br>
+    <input type="radio" id="class5" value="Class 5">
+    <label for="class5">Class 5</label>
+</form>
+
+<table style="margin-left: 10%; position: center; float: center;">
+    <tr>
+        <td style="font-size:medium; font-family:Arial, Helvetica, sans-serif; font-weight: x; ">Enter Professor Email (abc123):</td>
+        <td><input type="email" style="background-color:rgb(247, 242, 233);" id="inputFileNameToSaveAs"></input></td>
+        <td><button onclick="saveTextAsFile()">SUBMIT</button></td>
+    </tr>
+    <tr><td>Enter Complaint:</td></tr>
+    <tr>
+        <td colspan="3">
+            <textarea id="inputTextToSave" style="background-color:rgb(247, 242, 233);" cols="80" rows="25"></textarea>
+        </td>
+    </tr>
+    <tr style="margin-left: 100%;">
+        <td>
+            <button>Report</button>
+        </td>
+    </tr>
+    
+    
+</table>
+
+<script type="text/javascript">
+
+function saveTextAsFile()
+{
+    var textToSave = document.getElementById("inputTextToSave").value;
+    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+    var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+
+    var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+    downloadLink.href = textToSaveAsURL;
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+
+    downloadLink.click();
+}
+
+function destroyClickedElement(event)
+{
+    document.body.removeChild(event.target);
+}
+
+function loadFileAsText()
+{
+    var fileToLoad = document.getElementById("fileToLoad").files[0];
+
+    var fileReader = new FileReader();
+    fileReader.onload = function(fileLoadedEvent) 
+    {
+        var textFromFileLoaded = fileLoadedEvent.target.result;
+        document.getElementById("inputTextToSave").value = textFromFileLoaded;
+    };
+    fileReader.readAsText(fileToLoad, "UTF-8");
+}
+
+
+
+</script>
+
+</body>
+</html>

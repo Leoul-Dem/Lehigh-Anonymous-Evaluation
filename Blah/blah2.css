@@ -1,0 +1,134 @@
+background-color
+{
+    white
+}
+
+.sidey
+{
+}
+
+.toppy
+{
+    position: sticky;
+    top: 0;
+}
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(83, 40, 31);
+}
+
+li
+{
+    float: left;
+}
+
+li a
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+li a:hover
+{
+    background-color: rgb(255, 40, 40);
+    padding: 10px;
+
+}
+
+.select
+{
+    background-color: rgb(255, 40, 40);
+}
+
+.homepage a
+{
+    padding: 1px 16px;
+}
+
+.homepage a:hover
+{
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: #0E2C89;
+}
+
+h1
+{
+    font-size: 50px;
+    font-weight: 10000;
+    font-family: Arial, Helvetica, sans-serif;
+    Color: #000000;
+    
+}
+body
+{
+ background-color: #ffffff;
+ color: #000000;
+} 
+
+.blah
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    margin-left: 27.5%;
+    margin-right: 27.5%;
+}
+
+.ree
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.title
+{
+    font-size: 50px;
+    display: block;
+    color:#000000;
+    font-weight: 2500;
+    margin-bottom: -45px;
+    margin-top: -45px;
+}
+
+h4
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 0%;
+    color: #000000;
+    font-weight: 100;
+}
+
+
+
+
+
+hr
+{
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: #86adff;
+}
+
+
+
+table, th, td {
+  border: 1%  black;
+  border-style: single;
+  box-align: right;
+}
+
+
